@@ -18,8 +18,8 @@ for x in range(width):
         # Get the values of rgb for each pixel
         red, green, blue = image.getpixel((x, y))
 
-        # Calculate the average for each pixel
-        avg = (red + blue + green)/3
+        # Calculate the average for each pixel and ensure value is an integer
+        avg = int((red + blue + green)/3)
 
         # Set Pixel with grey value
         pixels[x, y] = (avg, avg, avg)
